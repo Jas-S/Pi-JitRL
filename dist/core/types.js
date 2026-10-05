@@ -1,0 +1,1 @@
+export const ACTIONS = ["READ", "SEARCH", "EDIT", "WRITE", "BASH", "TEST", "BUILD", "TYPECHECK", "LINT", "GIT", "DELEGATE"];

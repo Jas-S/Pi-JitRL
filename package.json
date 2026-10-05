@@ -1,0 +1,25 @@
+{
+  "name": "pi-jitrl",
+  "version": "0.1.0",
+  "description": "Advantage-guided action-level learning for Pi coding agents",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/Jas-S/Pi-JitRL.git" },
+  "homepage": "https://github.com/Jas-S/Pi-JitRL#readme",
+  "bugs": { "url": "https://github.com/Jas-S/Pi-JitRL/issues" },
+  "engines": { "node": ">=22.19.0" },
+  "keywords": ["pi-package", "jitrl", "reinforcement-learning"],
+  "pi": { "extensions": ["./dist/extension.js"] },
+  "exports": { "./core": { "types": "./dist/core/index.d.ts", "import": "./dist/core/index.js" } },
+  "files": ["dist", "README.md", "README.zh-CN.md", "README.ja.md", "LICENSE", "docs"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && tsx --test test/*.test.ts",
+    "experiment": "tsx experiments/action-policy.ts",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": { "@earendil-works/pi-coding-agent": "*", "@mariozechner/pi-coding-agent": "*" },
+  "peerDependenciesMeta": { "@earendil-works/pi-coding-agent": { "optional": true }, "@mariozechner/pi-coding-agent": { "optional": true } },
+  "devDependencies": { "@earendil-works/pi-coding-agent": "1.0.3", "@types/node": "^24.0.0", "tsx": "^4.20.0", "typescript": "^5.9.0" }
+}
