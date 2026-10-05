@@ -101,6 +101,8 @@ npm pack --dry-run
 
 测试覆盖回报计算、稀疏证据、项目隔离、持久化、分支反馈和 Pi 实际扩展加载器，也会在不调用模型的情况下运行 Pi 的 bash 工具。实验使用合成轨迹展示 advantage 对参考策略的影响，不是 Agent 效果评测。
 
+[本机 Codex 验证记录](docs/validation.md)记载了三轮真实 Pi 运行，也确认了重启后引导内容进入实际模型请求。记录使用英文。
+
 `src/core` 是独立于 Pi 的学习逻辑，可通过 `pi-jitrl/core` 导入。`src/storage` 实现 SQLite 存储，`src/extension.ts` 负责 Pi 事件和命令。公式与论文差异见[算法说明](docs/algorithm.md)，实现范围见 [V1 范围](docs/v1.md)，这两份说明使用英文。
 
 ## 参考资料

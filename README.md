@@ -101,6 +101,8 @@ npm pack --dry-run
 
 Tests cover return calculations, sparse evidence, project isolation, persistence, branch feedback and Pi's actual extension loader. They also run Pi's bash tool without calling a model. The experiment uses synthetic trajectories to show how advantages change the reference policy; it is not an agent benchmark.
 
+The [local Codex validation](docs/validation.md) records three real Pi runs, including guidance reaching provider requests after a restart.
+
 `src/core` contains the Pi-independent learning logic and exports through `pi-jitrl/core`. `src/storage` implements SQLite persistence. `src/extension.ts` adapts Pi events and commands. See [the algorithm notes](docs/algorithm.md) for the equations and V1's departures from the paper, and [the V1 scope](docs/v1.md) for the implementation boundary.
 
 ## References
